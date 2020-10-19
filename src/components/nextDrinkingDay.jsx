@@ -13,7 +13,7 @@ export default function NextDrinkingDay({
   return (
     <div className="jumbotron">
       <h1 className="text-center">
-        <span className="small">Your next drinking day is</span> <br />
+        <span className="small">Your next drinking day is </span> <br />
         {format(nextDate, "do MMM yyyy")}
       </h1>
 
