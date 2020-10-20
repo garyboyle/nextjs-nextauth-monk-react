@@ -16,7 +16,8 @@ export default function NextDrinkingDay({
     <>
       <h1 className="text-center">
         <span className="small">Your next drinking day is </span> <br />
-        {format(nextDate, "do MMM yyyy")}
+        {format(nextDate, "do MMM yyyy")} <br />
+        🍺🍺🍺🍺🍺
       </h1>
 
       <p>
