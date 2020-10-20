@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import NextDrinkingDay from "./components/nextDrinkingDay";
-import "./App.css";
+import NextDrinkingDay from "../src/components/nextDrinkingDay";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function App() {
+function HomePage() {
   const [maxDrinkingDays, setMaxDrinkingDays] = useState(50);
   const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(42);
 
@@ -24,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default HomePage;
