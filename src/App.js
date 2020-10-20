@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const [maxDrinkingDays, setMaxDrinkingDays] = useState(50);
-  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(43);
+  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(42);
 
   function handleMaxDrinkingDaysChange(delta) {
     setMaxDrinkingDays(maxDrinkingDays + delta);
@@ -15,14 +15,12 @@ function App() {
   }
 
   return (
-    <>
-      <NextDrinkingDay
-        maxDrinkingDay={maxDrinkingDays}
-        drinkingDaysSoFar={drinkingDaysSoFar}
-        onMaxDrinkingDaysChange={handleMaxDrinkingDaysChange}
-        onDrinkingDaysSoFarChange={handleDrinkingDaysSoFarChange}
-      />
-    </>
+    <NextDrinkingDay
+      maxDrinkingDay={maxDrinkingDays}
+      drinkingDaysSoFar={drinkingDaysSoFar}
+      onMaxDrinkingDaysChange={handleMaxDrinkingDaysChange}
+      onDrinkingDaysSoFarChange={handleDrinkingDaysSoFarChange}
+    />
   );
 }
 
