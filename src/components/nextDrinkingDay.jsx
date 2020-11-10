@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { format, addDays } from "date-fns";
 
-export default function NextDrinkingDay({
-  maxDrinkingDay,
-  drinkingDaysSoFar,
-  onMaxDrinkingDaysChange,
-  onDrinkingDaysSoFarChange,
-}) {
+export default function NextDrinkingDay() {
+  const [maxDrinkingDays, setMaxDrinkingDays] = useState(50);
+  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(44);
+
+  function handleMaxDrinkingDaysChange(delta) {
+    setMaxDrinkingDays(maxDrinkingDays + delta);
+  }
+
+  function handleDrinkingDaysSoFarChange(delta) {
+    setDrinkingDaysSoFar(drinkingDaysSoFar + delta);
+  }
+
   const nextDrinkDay = Math.ceil(
-    (366 * (drinkingDaysSoFar + 1)) / maxDrinkingDay
+    (366 * (drinkingDaysSoFar + 1)) / maxDrinkingDays
   );
   const nextDate = addDays(new Date(2020, 0, 1), nextDrinkDay);
 
@@ -23,30 +29,30 @@ export default function NextDrinkingDay({
       <p>
         <button
           className="btn btn-primary m-2"
-          onClick={() => onMaxDrinkingDaysChange(1)}
+          onClick={() => handleMaxDrinkingDaysChange(1)}
         >
           +
         </button>
         <button
           className="btn btn-primary m-2"
-          disabled={drinkingDaysSoFar >= maxDrinkingDay}
-          onClick={() => onMaxDrinkingDaysChange(-1)}
+          disabled={drinkingDaysSoFar >= maxDrinkingDays}
+          onClick={() => handleMaxDrinkingDaysChange(-1)}
         >
           -
         </button>
-        {maxDrinkingDay} max drinking days per year
+        {maxDrinkingDays} max drinking days per year
       </p>
       <p>
         <button
           className="btn btn-primary m-2"
-          disabled={drinkingDaysSoFar >= maxDrinkingDay}
-          onClick={() => onDrinkingDaysSoFarChange(1)}
+          disabled={drinkingDaysSoFar >= maxDrinkingDays}
+          onClick={() => handleDrinkingDaysSoFarChange(1)}
         >
           +
         </button>
         <button
           className="btn btn-primary m-2"
-          onClick={() => onDrinkingDaysSoFarChange(-1)}
+          onClick={() => handleDrinkingDaysSoFarChange(-1)}
         >
           -
         </button>

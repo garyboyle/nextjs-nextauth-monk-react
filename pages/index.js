@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { signIn, useSession } from "next-auth/client";
 import NextDrinkingDay from "../src/components/nextDrinkingDay";
 import NavBar from "../src/components/navBar";
@@ -6,16 +6,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Page() {
   const [session] = useSession();
-  const [maxDrinkingDays, setMaxDrinkingDays] = useState(50);
-  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(44);
-
-  function handleMaxDrinkingDaysChange(delta) {
-    setMaxDrinkingDays(maxDrinkingDays + delta);
-  }
-
-  function handleDrinkingDaysSoFarChange(delta) {
-    setDrinkingDaysSoFar(drinkingDaysSoFar + delta);
-  }
 
   return (
     <>
@@ -33,12 +23,7 @@ export default function Page() {
       {session && (
         <>
           <NavBar />
-          <NextDrinkingDay
-            maxDrinkingDay={maxDrinkingDays}
-            drinkingDaysSoFar={drinkingDaysSoFar}
-            onMaxDrinkingDaysChange={handleMaxDrinkingDaysChange}
-            onDrinkingDaysSoFarChange={handleDrinkingDaysSoFarChange}
-          />
+          <NextDrinkingDay />
         </>
       )}
     </>
