@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import { format, addDays } from "date-fns";
 
-export default function NextDrinkingDay() {
-  const [maxDrinkingDays, setMaxDrinkingDays] = useState(50);
-  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(44);
+export default function NextDrinkingDay({
+  maxDrinkingDaysInitialValue,
+  drinkingDaysSoFarStartInitialValue,
+}) {
+  const [maxDrinkingDays, setMaxDrinkingDays] = useState(
+    maxDrinkingDaysInitialValue
+  );
+  const [drinkingDaysSoFar, setDrinkingDaysSoFar] = useState(
+    drinkingDaysSoFarStartInitialValue
+  );
 
   function handleMaxDrinkingDaysChange(delta) {
     setMaxDrinkingDays(maxDrinkingDays + delta);
