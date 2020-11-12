@@ -1,5 +1,7 @@
 ## Frameworks, libraries, tools
 
+[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)]
+
 Initially this app was created using the [Create React App](https://github.com/facebook/create-react-app). This allows you to creeate a [react](https://reactjs.org/) app with little to no configuration.
 
 [Next.js](https://nextjs.org/) was then added to the project. You do have the option of creating a Next.js app from scratch but I wanted to test out retrofitting Next.js into a react app. Turns out it's fairly straight forward.
