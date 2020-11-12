@@ -1,6 +1,5 @@
 import React from "react";
 import NavBar from "../src/components/navBar";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function editUser({ user }) {
   return (

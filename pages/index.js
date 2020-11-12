@@ -1,8 +1,8 @@
 import React from "react";
+import Head from "next/head";
 import { signIn, useSession } from "next-auth/client";
 import NextDrinkingDay from "../src/components/nextDrinkingDay";
 import NavBar from "../src/components/navBar";
-import "bootstrap/dist/css/bootstrap.min.css";
 import db from "./api/utils/db";
 
 export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {
@@ -10,6 +10,9 @@ export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {
 
   return (
     <>
+      <Head>
+        <title>Goals</title>
+      </Head>
       {!session && (
         <>
           <h1 className="text-center">Not signed in </h1>
