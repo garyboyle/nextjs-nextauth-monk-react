@@ -1,8 +1,7 @@
 import React from "react";
-import Head from "next/head";
 import { signIn, useSession } from "next-auth/client";
-import NextDrinkingDay from "../src/components/nextDrinkingDay";
-import NavBar from "../src/components/navBar";
+import NextDrinkingDay from "@components/nextDrinkingDay";
+import NavBar from "@components/navBar";
 import db from "./api/utils/db";
 
 export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {

@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../src/components/navBar";
+import NavBar from "@components/navBar";
 
 export default function editUser({ user }) {
   return (
