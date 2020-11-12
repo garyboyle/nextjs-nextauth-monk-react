@@ -1,6 +1,6 @@
 ## Frameworks, libraries, tools
 
-[![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)]
+![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge) ![Dependencies](https://david-dm.org/garyboyle/nextjs-nextauth-monk-react.svg)
 
 Initially this app was created using the [Create React App](https://github.com/facebook/create-react-app). This allows you to creeate a [react](https://reactjs.org/) app with little to no configuration.
 
