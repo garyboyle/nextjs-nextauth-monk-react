@@ -10,9 +10,6 @@ export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {
 
   return (
     <>
-      <Head>
-        <title>Goals</title>
-      </Head>
       {!session && (
         <>
           <h1 className="text-center">Not signed in </h1>
