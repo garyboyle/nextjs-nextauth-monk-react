@@ -1,5 +1,3 @@
-This is a showcase project.
-
 ## Frameworks, libraries, tools
 
 Initially this app was created using the [Create React App](https://github.com/facebook/create-react-app). This allows you to creeate a [react](https://reactjs.org/) app with little to no configuration.
