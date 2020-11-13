@@ -6,9 +6,7 @@ export default function NavBar() {
   return (
     <nav className="navbar navbar-light bg-light">
       <Link href="/">
-        <a className="navbar-brand" href="/">
-          Goals
-        </a>
+        <a className="navbar-brand">Goals</a>
       </Link>
 
       <div>
