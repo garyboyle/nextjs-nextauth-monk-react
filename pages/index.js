@@ -4,7 +4,7 @@ import NextDrinkingDay from "@components/nextDrinkingDay";
 import NavBar from "@components/navBar";
 import db from "./api/utils/db";
 
-export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {
+export default function Page({ maxDrinkingDays, drinkingDaysSoFar, name }) {
   const [session] = useSession();
 
   return (
@@ -27,6 +27,7 @@ export default function Page({ maxDrinkingDays, drinkingDaysSoFar }) {
             <NextDrinkingDay
               maxDrinkingDaysInitialValue={maxDrinkingDays}
               drinkingDaysSoFarStartInitialValue={drinkingDaysSoFar}
+              name={name}
             />
           </div>
         </>
@@ -42,6 +43,7 @@ export async function getStaticProps() {
     props: {
       maxDrinkingDays: user.maxDrinkingDays,
       drinkingDaysSoFar: user.drinkingDaysSoFar,
+      name: user.name || "",
     },
   };
 }

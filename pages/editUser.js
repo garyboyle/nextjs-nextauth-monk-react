@@ -1,13 +1,14 @@
 import React from "react";
 import NavBar from "@components/navBar";
+import db from "./api/utils/db";
 
-export default function editUser({ user }) {
+export default function editUser({ maxDrinkingDays, drinkingDaysSoFar, name }) {
   return (
     <>
       <NavBar></NavBar>
       <div className="container">
         <h1>Edit user</h1>
-        <form>
+        <form action="/api/user/save" method="POST">
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -16,7 +17,7 @@ export default function editUser({ user }) {
               className="form-control"
               name="name"
               id="name"
-              defaultValue=""
+              defaultValue={name}
             />
           </div>
           <div className="form-group">
@@ -27,7 +28,7 @@ export default function editUser({ user }) {
               placeholder="Max drinking days"
               name="maxDrinkingDays"
               id="maxDrinkingDays"
-              defaultValue=""
+              defaultValue={maxDrinkingDays}
             />
           </div>
           <div className="form-group">
@@ -38,7 +39,7 @@ export default function editUser({ user }) {
               placeholder="Drinking days so far"
               name="drinkingDaysSoFar"
               id="drinkingDaysSoFar"
-              defaultValue=""
+              defaultValue={drinkingDaysSoFar}
             />
           </div>
           <button className="btn btn-lg btn-primary">Save</button>
@@ -46,4 +47,18 @@ export default function editUser({ user }) {
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const user = await db.get("users").findOne({ email: "gary@shayoo.ie" });
+  console.log(user);
+
+  return {
+    props: {
+      maxDrinkingDays: user.maxDrinkingDays || 0,
+      drinkingDaysSoFar: user.drinkingDaysSoFar || 0,
+      email: user.email,
+      name: user.name || "",
+    },
+  };
 }

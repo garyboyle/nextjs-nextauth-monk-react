@@ -4,6 +4,7 @@ import { format, addDays } from "date-fns";
 export default function NextDrinkingDay({
   maxDrinkingDaysInitialValue,
   drinkingDaysSoFarStartInitialValue,
+  name,
 }) {
   const [maxDrinkingDays, setMaxDrinkingDays] = useState(
     maxDrinkingDaysInitialValue
@@ -13,22 +14,24 @@ export default function NextDrinkingDay({
   );
 
   function handleMaxDrinkingDaysChange(delta) {
-    setMaxDrinkingDays(maxDrinkingDays + delta);
+    setMaxDrinkingDays(+maxDrinkingDays + delta);
   }
 
   function handleDrinkingDaysSoFarChange(delta) {
-    setDrinkingDaysSoFar(drinkingDaysSoFar + delta);
+    setDrinkingDaysSoFar(+drinkingDaysSoFar + delta);
   }
 
   const nextDrinkDay = Math.ceil(
-    (366 * (drinkingDaysSoFar + 1)) / maxDrinkingDays
+    (366 * (+drinkingDaysSoFar + 1)) / maxDrinkingDays
   );
+
   const nextDate = addDays(new Date(2020, 0, 1), nextDrinkDay);
 
   return (
     <>
       <h1 className="text-center">
-        <span className="small">Your next drinking day is </span> <br />
+        <span className="small">Hi {name}, your next drinking day is </span>{" "}
+        <br />
         {format(nextDate, "do MMM yyyy")} <br />
         🍺🍺🍺🍺🍺
       </h1>

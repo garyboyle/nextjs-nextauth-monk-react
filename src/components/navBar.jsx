@@ -8,9 +8,14 @@ export default function NavBar() {
         Goals
       </a>
 
-      <button className="btn btn-primary" onClick={signOut}>
-        Sign out
-      </button>
+      <div>
+        <a className="btn btn-outline-dark m-2" href="/editUser" role="button">
+          My account
+        </a>
+        <button className="btn btn-primary" onClick={signOut}>
+          Sign out
+        </button>
+      </div>
     </nav>
   );
 }
