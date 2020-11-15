@@ -7,10 +7,12 @@ export default async function handler(req, res) {
 
   const { name, maxDrinkingDays, drinkingDaysSoFar } = req.body;
 
-  await users.update(
+  const updatedUser = await users.update(
     { email: "gary@shayoo.ie" },
     { $set: { name, maxDrinkingDays, drinkingDaysSoFar } }
   );
+
+  console.log(updatedUser);
 
   res.redirect("/");
 }

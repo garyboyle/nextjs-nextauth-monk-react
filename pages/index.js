@@ -36,8 +36,12 @@ export default function Page({ maxDrinkingDays, drinkingDaysSoFar, name }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ res }) {
   const user = await db.get("users").findOne({ email: "gary@shayoo.ie" });
+
+  if (!user || !user.name) {
+    res.redirect("/editUser");
+  }
 
   return {
     props: {
