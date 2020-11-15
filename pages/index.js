@@ -41,9 +41,9 @@ export async function getStaticProps() {
 
   return {
     props: {
-      maxDrinkingDays: user.maxDrinkingDays,
-      drinkingDaysSoFar: user.drinkingDaysSoFar,
-      name: user.name || "",
+      maxDrinkingDays: user?.maxDrinkingDays || 0,
+      drinkingDaysSoFar: user?.drinkingDaysSoFar || 0,
+      name: user?.name || "",
     },
   };
 }
