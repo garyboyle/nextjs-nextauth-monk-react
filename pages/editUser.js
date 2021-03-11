@@ -51,7 +51,6 @@ export default function editUser({ maxDrinkingDays, drinkingDaysSoFar, name }) {
 
 export async function getServerSideProps() {
   const user = await db.get("users").findOne({ email: "gary@shayoo.ie" });
-  console.log(user);
 
   return {
     props: {
