@@ -40,7 +40,10 @@ export async function getServerSideProps({ res }) {
   const user = await db.get("users").findOne({ email: "gary@shayoo.ie" });
 
   if (!user || !user.name) {
-    res.redirect("/editUser");
+    res.writeHead(302, {
+      Location: "/editUser",
+    });
+    res.end();
   }
 
   return {
