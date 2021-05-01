@@ -18,9 +18,6 @@
   "peerOptionalDependencies": {
     "mongodb": "^3.6.2"
   },
-  "resolutions": {
-    "typeorm": "0.2.24"
-  },
   "scripts": {
     "dev": "next",
     "build": "next build",
