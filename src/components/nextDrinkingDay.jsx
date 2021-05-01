@@ -22,10 +22,10 @@ export default function NextDrinkingDay({
   }
 
   const nextDrinkDay = Math.ceil(
-    (366 * (+drinkingDaysSoFar + 1)) / maxDrinkingDays
+    (365 * (+drinkingDaysSoFar + 1)) / maxDrinkingDays
   );
 
-  const nextDate = addDays(new Date(2020, 0, 1), nextDrinkDay);
+  const nextDate = addDays(new Date(2021, 0, 1), nextDrinkDay);
 
   return (
     <>
