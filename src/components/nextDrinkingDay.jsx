@@ -33,7 +33,7 @@ export default function NextDrinkingDay({
         <span className="small">Hi {name}, your next drinking day is </span>{" "}
         <br />
         {format(nextDate, "do MMM yyyy")} <br />
-        🍺🍺🍺🍺🍺
+        🍺🍺🍺🍺🍺🍺🍺🍺
       </h1>
 
       <p>
