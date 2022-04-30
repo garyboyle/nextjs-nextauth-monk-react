@@ -62,6 +62,6 @@ const options = {
 };
 
 export default (req, res) => {
-  console.log(options)
+  console.log(JSON.stringify(options.providers[0].server))
   return NextAuth(req, res, options);
 }
