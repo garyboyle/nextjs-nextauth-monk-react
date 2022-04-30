@@ -61,4 +61,7 @@ const options = {
   },
 };
 
-export default (req, res) => NextAuth(req, res, options);
+export default (req, res) => {
+  console.log(options)
+  return NextAuth(req, res, options);
+}
