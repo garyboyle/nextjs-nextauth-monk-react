@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider } from "next-auth/client";
+import { SessionProvider } from "next-auth/react";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -9,9 +9,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Goals</title>
       </Head>
-      <Provider session={pageProps.session}>
+      <SessionProvider session={pageProps.session}>
         <Component {...pageProps} />
-      </Provider>
+      </SessionProvider>
     </>
   );
 }

@@ -1,11 +1,11 @@
 import React from "react";
-import { signIn, useSession } from "next-auth/client";
+import { signIn, useSession } from "next-auth/react";
 import NextDrinkingDay from "@components/nextDrinkingDay";
 import NavBar from "@components/navBar";
 import db from "./api/utils/db";
 
 export default function Page({ maxDrinkingDays, drinkingDaysSoFar, name }) {
-  const [session] = useSession();
+  const { data: session } = useSession();
 
   return (
     <>
