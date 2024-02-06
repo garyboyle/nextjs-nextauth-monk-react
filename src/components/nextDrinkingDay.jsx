@@ -25,7 +25,7 @@ export default function NextDrinkingDay({
     (365 * (+drinkingDaysSoFar + 1)) / maxDrinkingDays
   );
 
-  const nextDate = addDays(new Date(2023, 0, 1), nextDrinkDay);
+  const nextDate = addDays(new Date(2024, 0, 1), nextDrinkDay);
 
   return (
     <>
