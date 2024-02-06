@@ -54,10 +54,10 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      maxDrinkingDays: user.maxDrinkingDays || 0,
-      drinkingDaysSoFar: user.drinkingDaysSoFar || 0,
-      email: user.email,
-      name: user.name || "",
+      maxDrinkingDays: user?.maxDrinkingDays || 0,
+      drinkingDaysSoFar: user?.drinkingDaysSoFar || 0,
+      email: user?.email || "",
+      name: user?.name || "",
     },
   };
 }
