@@ -1,6 +1,6 @@
 ## Frameworks, libraries, tools
 
-![Dependencies](https://david-dm.org/garyboyle/nextjs-nextauth-monk-react.svg)
+![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/garyboyle/nextjs-nextauth-monk-react) ![Dependencies](https://david-dm.org/garyboyle/nextjs-nextauth-monk-react.svg)
 
 Initially this app was created using the [Create React App](https://github.com/facebook/create-react-app). This allows you to set up a [react](https://reactjs.org/) app with little to no configuration.
 
