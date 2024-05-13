@@ -1,6 +1,6 @@
 ## Frameworks, libraries, tools
 
-![Heroku](https://heroku-badge.herokuapp.com/?app=shayoo-goals) ![Dependencies](https://david-dm.org/garyboyle/nextjs-nextauth-monk-react.svg)
+![Dependencies](https://david-dm.org/garyboyle/nextjs-nextauth-monk-react.svg)
 
 Initially this app was created using the [Create React App](https://github.com/facebook/create-react-app). This allows you to set up a [react](https://reactjs.org/) app with little to no configuration.
 
